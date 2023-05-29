@@ -93,7 +93,7 @@ class DownloadEngine(QThread):
             remaining_images = self.num - n * 30
             if remaining_images >0:
                 start_index = n * 30
-                self.ParseJSON(start_index, start_index + remaining_images, img_url_queue)
+                self.ParseJSON(start_index, 30, img_url_queue)
         return img_url_queue
 
     def sub_update_progressBar(self):
